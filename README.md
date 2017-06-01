@@ -2,7 +2,7 @@
 The Bluemix catalogue provides many Watson service APIs that you can use to enhance your chatbot. In this demo, I'll use the Language Translator API and the Watson Conversation language to create a chatbot that support multi-languages. The chatbot automatically detects the language used in the conversation and responds accordingly. This demo is based on the Watson Developer Cloud's [botkit-middleware](https://github.com/watson-developer-cloud/botkit-middleware), which provides interfaces for Slack, Facebook, and Twilio clients.
 
 ## Bot Setup
-You'll need to acquire a SLACK token (Bot User OAuth Access Token) to connect to a SLACK bot user. If you haven't got one, you can follow the following [Botkit's instructions](https://github.com/howdyai/botkit) to create one.
+You'll need to create a Facebook Fan page and acquire a FB access code from https://developers.facebook.com
 
 Follow [botkit-middleware](https://github.com/watson-developer-cloud/botkit-middleware) to understand how botkit works on Bluemix.
 
@@ -31,7 +31,7 @@ The next step is to link these services to the [sample code](https://github.com/
 
 Update the service list with the name of the created Translator and Conversation services.
 
-Also, update the conversation Workspace IDs and the SLACK token
+Also, update the conversation Workspace IDs and the Facebook access token
 
 ```
 applications:
@@ -39,17 +39,17 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: multilanguage-chatbot
-  host: multilanguage-chatbot
-  buildpack: sdk-for-nodejs
+  name: watson-the-star
+  host: watson-the-star
   disk_quota: 1024M
 services:
-- Conversation-xx
-- Language Translator-xx
+- Conversation-star
+- Language Translator-star
 env:
-  CONVERSATION_WORKSPACE_ID: default conversation workspace ID
-  CONVERSATION_WORKSPACE_ID_fr: conversation workspace ID for French language
-  SLACK_TOKEN: Bot User OAuth Access Token
+  CONVERSATION_WORKSPACE_ID: Default Conversation workspace ID (English)
+  CONVERSATION_WORKSPACE_ID_cn: Conversation workspace ID for Chinese
+  FB_ACCESS_TOKEN: Your Facebook app access token
+  FB_VERIFY_TOKEN: Your verify token for Facebook web hook
 ```
 
 Push the application to Bluemix. From the sample code directory (where the manifest.yml is located),
@@ -60,4 +60,4 @@ cf login -u YOUR_BLUEMIX_USERNAME
 cf push
 ```
 
-You can start now chatting with your SLACK chatbot in either English or French. 
+You can start now chatting with your Facebook chatbot in either English or Chinese.
