@@ -1,0 +1,31 @@
+{
+  "name": "watson-botkit-demo",
+  "version": "1.0.0",
+  "description": "watson conversation using botkit",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andonguyen/watson-multilanguage-botkit.git"
+  },
+  "author": "Do Nguyen",
+  "license": "ISC",
+  "dependencies": {
+    "botkit": "^0.5.4",
+    "botkit-middleware-watson": "^1.3.0",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "fb": "^2.0.0",
+    "jfs": "^0.2.6",
+    "jsonfile": "^3.0.0",
+    "lodash.replace": "^4.1.4",
+    "watson-developer-cloud": "^2.32.1"
+  },
+  "bugs": {
+    "url": "https://github.com/andonguyen/watson-multilanguage-botkit/issues"
+  },
+  "homepage": "https://github.com/andonguyen/watson-multilanguage-botkit#readme"
+}
