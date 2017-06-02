@@ -72,7 +72,7 @@ cf push
 When you finish the deployment and FB webhook is started, the webhook URL will be YOUR_FB_WEBHOOK_HOSTNAME.mybluemix.net
 Go back to the FB app (developers.facebook.com) and create a webhook connection and subscribe it to the messages, messaging_postbacks, messaging_optins, messaging_referals, messaging_deliveries, messaging_read and messaging_echoes, then click subscribe to link it to the deployed webhook on Bluemix
 
-![subscribe webhook](./images/configure_webhook_url0.png)
+![subscribe webhook](./images/configure_webhookurl0.png)
 
 On the webhook subscription popup, enter your Bluemix webhook URL and the generated VERIFY token
 ![link webhook](./images/configure_webhook_url1.png)
