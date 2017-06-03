@@ -1,16 +1,16 @@
 applications:
-- path: .
+- name: watson-the-star
+  path: .
   memory: 256M
   instances: 1
-  domain: mybluemix.net
-  name: watson-the-star
+  domain: au-syd.mybluemix.net
   host: watson-the-star
   disk_quota: 1024M
 services:
-- Conversation-star
-- Language Translator-star
+- Star-FB-messenger
+- Star-FB-translator
 env:
-  CONVERSATION_WORKSPACE_ID: Default English workspace ID
+  CONVERSATION_WORKSPACE_ID: 25c55974-4a90-4998-a802-047bfe674b99
   CONVERSATION_WORKSPACE_ID_cn: Chinese workspace ID
-  FB_ACCESS_TOKEN: Your FB page access token
-  FB_VERIFY_TOKEN: Your own generated verify token
+  FB_ACCESS_TOKEN: EAAa1ewJQsG4BAEma7ZB63bkxZC1xMjlx2TrvTWrmv6ceXZA47WINgtSRSAqhB01ZBYWKZC9I0z788ZC9PIX99sIjCpaWZAqifRCmc4CEZCVdxuMstG38M5K8cPWwOpgMZBjDkPGqcjyy62oAel5WmwRvqh1PYa68tqxL8zDxKp6TiVAZDZD
+  FB_VERIFY_TOKEN: bluemix-token
